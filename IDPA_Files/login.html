@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Klimateller Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  <div id="splash">
+	<img src="img/logo.png" alt="" class="logo" />
+	</div>
+    <div class="center">
+      <h1>Anmelden</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>E-Mail</label>
+        </div>
+		<div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Benutzername</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Passwort</label>
+        </div>
+		
+        <div class="pass"> <a href="forget.html"> Passwort vergessen?</div></a>
+        <input type="submit" value="Einloggen" onclick="location.href='index.html';">
+        <div class="signup_link">
+          Noch keinen Account? <a href="signup.html">Registrieren</a>
+        </div>
+      </form>
+    </div>
+	<script>
+		setTimeout(() =>{
+			document.getElementById('splash').classList.toggle
+			('fade');
+		}, 3000);
+	</script>
+  </body>
+</html>
