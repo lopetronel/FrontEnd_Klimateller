@@ -4,37 +4,44 @@
     <meta charset="utf-8">
     <title>Klimateller Sign Up</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="center">
       <h1>Erstellen Sie einen neuen Account</h1>
-      <form method="post">
+      <form method="post" id="registerForm">
         <div class="txt_field">
-          <input type="text" required>
+          <input type="text" name="email" required>
           <span></span>
           <label>E-Mail</label>
         </div>
 		<div class="txt_field">
-          <input type="text" required>
+          <input type="text" name="name" required>
           <span></span>
           <label>Benutzername</label>
         </div>
         <div class="txt_field">
-          <input type="password" required>
+          <input type="password" name="password" id="password" required>
           <span></span>
           <label>Passwort</label>
         </div>
 		<div class="txt_field">
-          <input type="password" required>
+          <input type="password" name="repeat_password" id="repeat_password" required>
           <span></span>
           <label>Passwort Bestätigen</label>
         </div>
-		
+        <div class="signup_link" id="formError" style="text-align:left;color:red;"></div>
+
         <input type="submit" value="Neuen Account Erstellen">
         <div class="signup_link">
           Du hast doch schon einen Account? <br> <a href="login.html">Zurüch zum Login</a>
         </div>
       </form>
     </div>
+    <script src="js/RequestUtil.js"></script>
+    <script src="js/Register.js"></script>
   </body>
 </html>
