@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <title>Index - Home</title>
     <link rel="stylesheet" type="text/css" href="stylesec.css">
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
   </head>
   <body>
 <nav class="navi">
@@ -18,35 +14,35 @@
 			</span>
     <span class="nav__text">Home</span>
   </a>
-
+  
   <a href="info.html" class="nav__link">
         	<span class="material-icons nav__icon">
 			<ion-icon name="leaf-outline"></ion-icon>
 			</span>
     <span class="nav__text">Information</span>
   </a>
-
+  
   <a href="optimal.html" class="nav__link nav__link--active">
             <span class="material-icons nav__icon">
 			<ion-icon name="thumbs-up-outline"></ion-icon>
 			</span>
     <span class="nav__text">Idealer Teller</span>
   </a>
-
+  
   <a href="#" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="receipt-outline"></ion-icon>
 			</span>
     <span class="nav__text">Rezepte</span>
   </a>
-
+  
   <a href="#" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="settings-outline"></ion-icon>
 			</span>
     <span class="nav__text">Settings</span>
   </a>
-
+  
 </nav>
 
 </div>
@@ -60,15 +56,76 @@
 </div>
 
 <hr class="accessory">
-
 <br>
 
+<div class="wrap2">
+	<div class="container">
+	<img class="plate" src="img/plate.png" alt="" />
+	<div class="centered">
+	<div id="donutchart" style="width: 900px; height: 800px;"></div>
+	</div>
+	</div>
+	
+</div>
+<hr class="accessory">
+<div class="wrap2blue">
+<h1>Getränke 19.4%</h1>
+</div>
+<div class="wrap2">
+<h4>Bevorzugt in Form von ungesüssten Getränken, z. B. Hahnenwasser, Mineralwasser, Kräutertee oder Früchtetee. Koffeinhaltige Getränke wie Kaffee, schwarzer und grüner Tee können ebenfalls zur nachhaltigen Flüssigkeitszufuhr beitragen. <br> (1-2 Liter täglich)</h4>
+</div>
+<hr class="accessory">
 
+<div class="wrap2red">
+<h1>Milchprodukte 10.8%</h1>
+</div>
+<div class="wrap2">
+<h4>Am Besten werden regionale Milchprodukte verzehrt um die Klimaschädlichen Transporte einzudämmen. Empfohlener Konsum: 3 Portionen Milch oder Milchprodukte pro Tag (1 Portion entspricht 2 dl Milch oder 150–200 g Milchprodukte oder 30–60 g Käse). </h4>
+</div>
+<hr class="accessory">
 
+<div class="wrap2orange">
+<h1>Kohlenhydrate 21.5%</h1>
+</div>
+<div class="wrap2">
+<h4>Getreideprodukte, Kartoffeln und Hülsenfrüchte welche regional verarbeitet und produziert wurden verursachen c.a. halb so wenig Co2 Emissionen als Fleisch</h4>
+</div>
+<hr class="accessory">
 
-<script src="js/SizingUtil.js"></script>
-<script src="js/RequestUtil.js"></script>
+<div class="wrap2green">
+<h1>Gemüse und Früchte 30.1%</h1>
+</div>
+<div class="wrap2">
+<h4>Wenn möglich Frisch oder sogar selbst angebautes Grünzeug verwenden. Pro Tag kann eine Portion durch 2 dl Gemüse- / Fruchtsaft (ohne Zuckerzusatz) ersetzt werden.</h4>
+</div>
+<hr class="accessory">
+
+<div class="wrap2purple">
+<h1>Fleisch und Fisch 7.5%</h1>
+</div>
+<div class="wrap2">
+<h4>Der Fleisch und Fischkonsum machen mit den Milchprodukten mehr als 40% der gesamten Umweltbelastung aus. Es ist empfohlen wenig bis gar kein Fleisch an mehreren Tagen in der Woche zu sich zu nehmen. Falls man jedoch trotztem Fleisch einkauft sollte man stehts auf Meta-Labels achten welche für eine ökologisch nachhaltige Ernährung stehen.</h4>
+</div>
+<hr class="accessory">
+
+<div class="wrap2lightblue">
+<h1>Fette und Öle 10.8%</h1>
+</div>
+<div class="wrap2">
+<h4>Empfohlener Konsum: Täglich 2–3 Esslöffel Pflanzenöl, davon mindestens die Hälfte in Form von Rapsöl. Dazu 1 Portion (20–30 g) ungesalzener Nüsse, Samen oder Kerne. Zusätzlich können Butter, Margarine, Rahm usw. sparsam verwendet werden (ca. 1 Esslöffel oder 10 g pro Tag).</h4>
+</div>
+<hr class="accessory">
+<br><br><br>
+<hr class="accessory">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>const progress = document.querySelector('.progress-done');
+
+progress.style.width = progress.getAttribute('data-done') + '%';
+progress.style.opacity = 1;
+</script>
+
   </body>
 </html>
+
