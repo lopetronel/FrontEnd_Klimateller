@@ -8,9 +8,7 @@ function makeRequest(method, url, data, onSuccess, onFail) {
       onSuccess(data);
      }
    }).fail(function(data) {
-     console.log(data)
      if(data.status == 403) {
-       console.log("test");
        location.href = "login.html";
      }else {
        if(onFail != undefined) {
