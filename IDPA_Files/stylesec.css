@@ -770,3 +770,10 @@ label {
 	background-color: #fff;
 	
 }
+
+.rightbut{
+	float:right;
+	padding-left: 30px;
+	padding-left: 50px;
+	align-items: right;
+}
