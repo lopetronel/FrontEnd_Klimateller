@@ -14,35 +14,35 @@
 			</span>
     <span class="nav__text">Home</span>
   </a>
-
+  
   <a href="info.html" class="nav__link">
         	<span class="material-icons nav__icon">
 			<ion-icon name="leaf-outline"></ion-icon>
 			</span>
     <span class="nav__text">Information</span>
   </a>
-
+  
   <a href="optimal.html" class="nav__link nav__link--active">
             <span class="material-icons nav__icon">
 			<ion-icon name="thumbs-up-outline"></ion-icon>
 			</span>
     <span class="nav__text">Idealer Teller</span>
   </a>
-
-  <a href="#" class="nav__link">
+  
+  <a href="rezepte.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="receipt-outline"></ion-icon>
 			</span>
     <span class="nav__text">Rezepte</span>
   </a>
-
-  <a href="#" class="nav__link">
+  
+  <a href="settings.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="settings-outline"></ion-icon>
 			</span>
     <span class="nav__text">Settings</span>
   </a>
-
+  
 </nav>
 
 </div>
@@ -51,7 +51,7 @@
 	<img class="logo" src="img/Logotrim.png" alt="" />
 				</div>
 </header>
-	<div class="text_container">
+	<div class="text_containergreen">
 	<h1> Der Ideale Klimateller im Überblick </h1>
 </div>
 
@@ -65,7 +65,7 @@
 	<div id="donutchart" style="width: 900px; height: 800px;"></div>
 	</div>
 	</div>
-
+	
 </div>
 <hr class="accessory">
 <div class="wrap2blue">
@@ -104,7 +104,7 @@
 <h1>Fleisch und Fisch 7.5%</h1>
 </div>
 <div class="wrap2">
-<h4>Der Fleisch und Fischkonsum machen mit den Milchprodukten mehr als 40% der gesamten Umweltbelastung aus. Es ist empfohlen wenig bis gar kein Fleisch an mehreren Tagen in der Woche zu sich zu nehmen. Falls man jedoch trotztem Fleisch einkauft sollte man stehts auf Meta-Labels achten welche für eine ökologisch nachhaltige Ernährung stehen.</h4>
+<h4>Der Fleisch und Fischkonsum machen mit den Milchprodukten mehr als 40% der gesamten Umweltbelastung aus. Es ist empfohlen wenig bis gar kein Fleisch an mehreren Tagen in der Woche zu sich zu nehmen. Falls man trotztem Fleisch einkauft sollte man stehts auf Meta-Labels achten welche für eine ökologisch nachhaltige Ernährung stehen.</h4>
 </div>
 <hr class="accessory">
 
@@ -115,9 +115,47 @@
 <h4>Empfohlener Konsum: Täglich 2–3 Esslöffel Pflanzenöl, davon mindestens die Hälfte in Form von Rapsöl. Dazu 1 Portion (20–30 g) ungesalzener Nüsse, Samen oder Kerne. Zusätzlich können Butter, Margarine, Rahm usw. sparsam verwendet werden (ca. 1 Esslöffel oder 10 g pro Tag).</h4>
 </div>
 <hr class="accessory">
-<br><br><br>
+	<div class="text_containerred">
+	<h1> Beispiel eines NICHT idealen Tellers </h1>
+</div>
 <hr class="accessory">
+<div class="wrap2">
+	<div class="container">
+	<img class="plate" src="img/plate2.png" alt="" />
+	<div class="centered">
+	<div id="donutchart" style="width: 900px; height: 800px;"></div>
+	</div>
+	</div>
+</div>
+<hr class="accessory">
+
+<div class="wrap2red">
+<h1>Was Sie können Sie dagegen tun?</h1>
+</div>
+<div class="wrap2">
+<ul>
+	<li>Essen Sie mehr Obst und Gemüse</li>
+	<li>Ersetzen Sie tierische Proteine durch pflanzliche</li>
+	<li>Essen Sie regional, wenn in der Saison</li>
+	<li>Essen Sie besser nicht mehr, als Sie benötigen, besonders Leckereien</li>
+	<li>Wählen Sie Vollkorn</li>
+	<li>Konsumieren Sie Milchprodukte in Massen</li>
+	<li>Trinken Sie Leitungswasser</li>
+	<li>Wählen Sie Meeresfrüchte aus nachhaltigen Quellen</li>
+</ul>
+</div>
+<hr class="accessory">
+<br><br><br>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>const progress = document.querySelector('.progress-done');
+
+progress.style.width = progress.getAttribute('data-done') + '%';
+progress.style.opacity = 1;
+</script>
+
   </body>
 </html>
+

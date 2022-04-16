@@ -3,12 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Index - Home</title>
-
     <link rel="stylesheet" type="text/css" href="stylesec.css">
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
   </head>
   <body>
 <nav class="navi">
@@ -19,35 +14,35 @@
 			</span>
     <span class="nav__text">Home</span>
   </a>
-
+  
   <a href="info.html" class="nav__link">
         	<span class="material-icons nav__icon">
 			<ion-icon name="leaf-outline"></ion-icon>
 			</span>
     <span class="nav__text">Information</span>
   </a>
-
+  
   <a href="optimal.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="thumbs-up-outline"></ion-icon>
 			</span>
     <span class="nav__text">Idealer Teller</span>
   </a>
-
-  <a href="#" class="nav__link">
+  
+  <a href="rezepte.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="receipt-outline"></ion-icon>
 			</span>
     <span class="nav__text">Rezepte</span>
   </a>
-
-  <a href="#" class="nav__link">
+  
+  <a href="settings.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="settings-outline"></ion-icon>
 			</span>
     <span class="nav__text">Settings</span>
   </a>
-
+  
 </nav>
 
 </div>
@@ -63,7 +58,7 @@
 	<div class="progress-done" data-done="70">
 		70%
 	</div><br>
-	<h1 id="co2_goal"> von 300 Gramm </h1>
+	<h1> von 300 Gramm </h1>
 	</div>
 </div>
 
@@ -71,16 +66,26 @@
 
 <hr class="accessory">
 
+
 <div class="wrap2">
-<h2>Zuletzt hinzugefügte Gerichte:&nbsp; &nbsp;</h2><br>
+<h2>Neues Gericht hinzufügen:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2><br>
   <a href="add.html"><button class="button"><ion-icon name="add-outline"></ion-icon></button></a>
 </div>
-<div id="timelineEntries">
-
+<hr class="accessory">
+<div class="wrap2">
+<h1>01.01.2022 </h1><br>
+</div>
+<div class="wrap2">
+<h1>Spaghetti Bolognese </h1>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<a href="#" class="button-63">Editieren</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="#" class="button-62"><ion-icon size="large" name="trash-outline"></ion-icon></a>
 </div>
 <hr class="accessory">
-<script src="js/RequestUtil.js"></script>
-<script src="js/Index.js"></script>
+<div class="wrap2">
+<h1>02.01.2022 </h1><br>
+</div>
+<div class="wrap2">
+<h1>Gemüseauflauf </h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<a href="#" class="button-63">Editieren</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="#" class="button-62"><ion-icon size="large" name="trash-outline"></ion-icon></a>
+</div>
+<hr class="accessory">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -89,5 +94,6 @@
 progress.style.width = progress.getAttribute('data-done') + '%';
 progress.style.opacity = 1;
 </script>
+
   </body>
 </html>

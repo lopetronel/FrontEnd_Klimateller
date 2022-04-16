@@ -46,11 +46,10 @@ transition: z-index 0.5s step-end, opacity 0.5s linear;
   background: white;
   border-radius: 20px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
-
+ 
 }
 .center h1{
   text-align: center;
-  font-size:10vw;
   padding: 20px 0;
   border-bottom: 1px solid silver;
 }
