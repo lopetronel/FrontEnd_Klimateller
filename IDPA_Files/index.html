@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Index - Home</title>
     <link rel="stylesheet" type="text/css" href="stylesec.css">
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
   </head>
   <body>
 <nav class="navi">
@@ -14,35 +17,35 @@
 			</span>
     <span class="nav__text">Home</span>
   </a>
-  
+
   <a href="info.html" class="nav__link">
         	<span class="material-icons nav__icon">
 			<ion-icon name="leaf-outline"></ion-icon>
 			</span>
     <span class="nav__text">Information</span>
   </a>
-  
+
   <a href="optimal.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="thumbs-up-outline"></ion-icon>
 			</span>
     <span class="nav__text">Idealer Teller</span>
   </a>
-  
+
   <a href="rezepte.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="receipt-outline"></ion-icon>
 			</span>
     <span class="nav__text">Rezepte</span>
   </a>
-  
+
   <a href="settings.html" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="settings-outline"></ion-icon>
 			</span>
     <span class="nav__text">Settings</span>
   </a>
-  
+
 </nav>
 
 </div>
@@ -58,7 +61,7 @@
 	<div class="progress-done" data-done="70">
 		70%
 	</div><br>
-	<h1> von 300 Gramm </h1>
+	<h1 id="co2_goal"></h1>
 	</div>
 </div>
 
@@ -72,6 +75,7 @@
   <a href="add.html"><button class="button"><ion-icon name="add-outline"></ion-icon></button></a>
 </div>
 <hr class="accessory">
+<div id="timelineentries">
 <div class="wrap2">
 <h1>01.01.2022 </h1><br>
 </div>
@@ -86,14 +90,10 @@
 <h1>Gemüseauflauf </h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<a href="#" class="button-63">Editieren</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="#" class="button-62"><ion-icon size="large" name="trash-outline"></ion-icon></a>
 </div>
 <hr class="accessory">
+</div>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<script>const progress = document.querySelector('.progress-done');
-
-progress.style.width = progress.getAttribute('data-done') + '%';
-progress.style.opacity = 1;
-</script>
-
+<script src="js/Index.js"></script>
+<script src="js/RequestUtil.js"></script>
   </body>
 </html>
