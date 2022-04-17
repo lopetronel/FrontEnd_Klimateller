@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Index - Home</title>
     <link rel="stylesheet" type="text/css" href="librarycss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
 <nav class="navi">
@@ -14,35 +15,35 @@
 			</span>
     <span class="nav__text">Alle</span>
   </a>
-  
+
   <a href="#" class="nav__link">
         	<span class="material-icons nav__icon">
 			<ion-icon name="fish-outline"></ion-icon>
 			</span>
     <span class="nav__text">Fleisch</span>
   </a>
-  
+
   <a href="#" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="leaf-outline"></ion-icon>
 			</span>
     <span class="nav__text">Gemüse&Früchte</span>
   </a>
-  
+
   <a href="#" class="nav__link nav__link--active">
             <span class="material-icons nav__icon">
 			<ion-icon name="pizza-outline"></ion-icon>
 			</span>
     <span class="nav__text">KH</span>
   </a>
-  
+
   <a href="#" class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="wine-outline"></ion-icon>
 			</span>
     <span class="nav__text">Getränke</span>
   </a>
-  
+
 </nav>
 
 </div>
@@ -69,7 +70,8 @@
    </div>
    <br><br>
    <hr class="accessory">
-   
+   <div id="libraryitems">
+     <!--
 <div class="wrap2">
 <h1>Pasta</h1><br>
   <a align="right" href="#"><button class="button2"><ion-icon name="add-outline"></ion-icon></button></a>
@@ -133,17 +135,13 @@
 <h1>Steak Rind </h1><br>
   <a href="#"><button style="float: right;" class="button2"><ion-icon name="add-outline"></ion-icon></button></a>
 </div>
-<hr class="accessory">
+<hr class="accessory">-->
+</div>
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<script>const progress = document.querySelector('.progress-done');
-
-progress.style.width = progress.getAttribute('data-done') + '%';
-progress.style.opacity = 1;
-</script>
+<script src="js/AddZutat.js"></script>
 
   </body>
 </html>

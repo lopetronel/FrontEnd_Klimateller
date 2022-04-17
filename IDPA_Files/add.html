@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Index - Home</title>
     <link rel="stylesheet" type="text/css" href="stylesec.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
 
@@ -21,7 +22,7 @@
 <hr class="accessory">
 	<div class="text_container">
 	<h1> Geben Sie ihrem Gericht einen Namen</h1>
-	<div class="block"><input type="text" class="input-res" value="TestGericht"></div>
+	<div class="block"><input type="text" class="input-res" id="gerichtname"></div>
 </div>
 <hr class="accessory">
 	<div class="text_container">
@@ -31,50 +32,49 @@
 <hr class="accessory">
 	<div class="text_container">
 	<h1>Anzahl Portionen:</h1>
-	 <input type="number" id="points" name="points" step="1">
+	 <input type="number" id="portions" name="portions" step="1" min=1 max=5>
 </div>
 <hr class="accessory">
 	<div class="text_container2">
 	<h1>Ihre Zutaten:</h1>
 </div>
 <hr class="accessory">
-	<div class="text_container2">
-	<h3>Pasta</h3>
-	<select>
-        <option value="regional">Regional</option>
-        <option value="">Nicht Regional</option>
-      </select>
-<h5>Gramm:</h5>
-<input type="number" id="gramm" name="gramm"> 	 
-<div class="right">
-<a href="#" class="button-62">Löschen</a>
-</div> 
+<div id="zutatencontainer">
+	<!--<div class="text_container2">
+  	<h3>Pasta</h3>
+  	<select>
+          <option value="regional">Regional</option>
+          <option value="">Nicht Regional</option>
+        </select>
+    <h5>Gramm:</h5>
+    <input type="number" id="gramm" name="gramm">
+    <div class="right">
+      <a href="#" class="button-62">Löschen</a>
+    </div>
+  </div>
+  <hr class="accessory">
+
+  	<div class="text_container2">
+  	<h3>Hackfleisch</h3>
+  	<select>
+          <option value="regional">Regional</option>
+          <option value="">Nicht Regional</option>
+        </select>
+  <h5>Gramm:</h5>
+  <input type="number" id="gramm" name="gramm">
+  <div class="right">
+  <a href="#" class="button-62">Löschen</a>
 </div>
-<hr class="accessory">
+  </div>-->
 
-	<div class="text_container2">
-	<h3>Hackfleisch</h3>
-	<select>
-        <option value="regional">Regional</option>
-        <option value="">Nicht Regional</option>
-      </select>
-<h5>Gramm:</h5>
-<input type="number" id="gramm" name="gramm"> 
-<div class="right">
-<a href="#" class="button-62">Löschen</a>
-</div> 
 </div>
-
-
-<hr class="accessory">
 	<div class="text_container">
 	<h1> Die Nährstoffe Ihres Gerichts betragen: </h1>
 <div class="wrap2">
 <ul>
-	<li>Kcal: 1063</li>
-	<li>Eiweiss: 33.88g</li>
-	<li>Fett: 55.45g</li>
-	<li>Kohlenhydrate: 104.49g</li>
+	<li id="meal_carbohydrates"></li>
+	<li id="meal_proteins"></li>
+	<li id="meal_fats"></li>
 </ul>
 </div>
 </div>
@@ -82,7 +82,7 @@
 	<div class="text_container">
 	<h1> Die Menge an Co2 die Ihr Gericht verursacht beträgt:</h1>
 
-	<h1>150g</h1>
+	<h1 id="meal_co2"></h1>
 </div>
 
 <hr class="accessory">
@@ -193,17 +193,13 @@
   </div>
  </div>
 	<div class="add_container">
-	<a href="index.html" class="button-64">GERICHT SPEICHERN</a>
+	<a class="button-64" id="submitgerichtbutton">GERICHT SPEICHERN</a>
 </div>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<script>const progress = document.querySelector('.progress-done');
-
-progress.style.width = progress.getAttribute('data-done') + '%';
-progress.style.opacity = 1;
-</script>
+<script src="js/RequestUtil.js"></script>
+<script src="js/AddGericht.js"></script>
 
   </body>
   </div>
