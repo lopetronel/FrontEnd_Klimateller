@@ -9,35 +9,35 @@
   <body>
 <nav class="navi">
 
-  <a href="#" class="nav__link">
-    		<span class="material-icons nav__icon">
+  <a class="nav__link">
+    		<span class="material-icons nav__icon nav__link--active">
 			<ion-icon name="restaurant-outline"></ion-icon>
 			</span>
     <span class="nav__text">Alle</span>
   </a>
 
-  <a href="#" class="nav__link">
+  <a class="nav__link">
         	<span class="material-icons nav__icon">
 			<ion-icon name="fish-outline"></ion-icon>
 			</span>
     <span class="nav__text">Fleisch</span>
   </a>
 
-  <a href="#" class="nav__link">
+  <a class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="leaf-outline"></ion-icon>
 			</span>
     <span class="nav__text">Gemüse&Früchte</span>
   </a>
 
-  <a href="#" class="nav__link nav__link--active">
+  <a class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="pizza-outline"></ion-icon>
 			</span>
     <span class="nav__text">KH</span>
   </a>
 
-  <a href="#" class="nav__link">
+  <a class="nav__link">
             <span class="material-icons nav__icon">
 			<ion-icon name="wine-outline"></ion-icon>
 			</span>
@@ -62,8 +62,8 @@
   <a href="add.html"><button class="button"><ion-icon name="arrow-back-outline"></ion-icon></button></a>
 	&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 	<div class="search">
-      <input type="text" class="searchTerm" placeholder="Suchen...">
-      <button type="submit" class="searchButton">
+      <input type="text" class="searchTerm" id="zutatensearch" placeholder="Suchen...">
+      <button type="submit" class="searchButton" onclick="filterZutaten();">
        <i><ion-icon name="search-outline"></ion-icon></i>
      </button>
    </div>

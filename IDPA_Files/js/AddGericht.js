@@ -38,7 +38,7 @@ function loadGericht() {
 
   let gerichtNameInput = $("#gerichtname");
   gerichtNameInput.val(gericht.name);
-  gerichtNameInput.keyup(function() {
+  gerichtNameInput.on('keyup input', function() {
     gericht.name = gerichtNameInput.val();
     saveGericht();
   });
@@ -46,7 +46,7 @@ function loadGericht() {
   let portionsInput = $("#portions");
   portionsInput.val(gericht.portions);
 
-  portionsInput.keyup(function() {
+  portionsInput.on('keyup input', function() {
     gericht.portions = parseInt(portionsInput.val());
     updatePreview();
     saveGericht();
@@ -87,7 +87,7 @@ function loadGericht() {
         updatePreview();
     });
 
-    $(".gramm").eq(indexCopy).keyup(function() {
+    $(".gramm").eq(indexCopy).on('keyup input', function() {
       gericht.ingredients[indexCopy].product_amount = parseInt($(".gramm").val());
       saveGericht();
       updatePreview();
@@ -147,10 +147,10 @@ function updatePreview() {
   carbohydrates *= gericht.portions;
   fats *= gericht.portions;
 
-  $("#meal_co2").text(co2_emissions + "kg CO2-Äq.")
-  $("#meal_carbohydrates").text("Kohlenhydrate: " + carbohydrates + "g");
-  $("#meal_proteins").text("Proteine: " + proteins + "g");
-  $("#meal_fats").text("Fett: " + fats + "g");
+  $("#meal_co2").text(round(co2_emissions, 2) + " kg CO2-Äquivalenz")
+  $("#meal_carbohydrates").text("Kohlenhydrate: " + round(carbohydrates, 2) + " g");
+  $("#meal_proteins").text("Proteine: " + round(proteins, 2) + " g");
+  $("#meal_fats").text("Fett: " + round(fats, 2) + " g");
 }
 
 function saveGericht() {
