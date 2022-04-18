@@ -777,3 +777,31 @@ label {
 	padding-left: 50px;
 	align-items: right;
 }
+
+.text_containergrey{
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgrey;
+	
+}
+
+.text_containergreen{
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: #9be695;
+	
+}
+
+.chat {
+  display: flex;
+  position: relative;
+}
+
+.bigbutton{
+	font-size: 70px;
+}

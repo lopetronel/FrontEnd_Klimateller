@@ -355,3 +355,11 @@ font-size: 40px
 .nav__text {
 	font-size: 35px;
 }
+
+.text_container2 {
+	width: 100%;
+	padding-left: 20px;
+	text-align: left;
+	align-items: left;
+	justify-content: left;
+}
