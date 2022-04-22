@@ -6,6 +6,7 @@ $(document).ready(function() {
 
 let gericht;
 let zutaten;
+let categories = ["fleisch", "gemuese_fruechte", "kh", "getraenke"];
 let category;
 
 function loadGericht() {
@@ -23,22 +24,23 @@ function loadZutaten() {
      return;
    }
    zutaten = JSON.parse(data);
-   updateZutatenUI();
 }
 
 function updateZutatenUI() {
   //Load the GUI
+  $("#libraryitems").html("");
   for(let i = 0;i<zutaten.length;i++) {
-    //TODO CATEGORIES
-    $("#libraryitems").append(`<div class="zutatitem"><div class="wrap2">
-    <h1>` + zutaten[i].product_name + `</h1><br>
-      <a align="right"><button class="button2"><ion-icon name="add-outline"></ion-icon></button></a>
-    </div>
-    <hr class="accessory"></div>`);
-    const indexCopy = i;
-    $(".button2").eq(indexCopy).click(function() {
-      addZutat(indexCopy);
-    });
+    if(category == 0 || zutaten[i].category == categories[category - 1]) {
+      $("#libraryitems").append(`<div class="zutatitem"><div class="wrap2">
+      <h1>` + zutaten[i].product_name + `</h1><br>
+        <a align="right"><button class="button2"><ion-icon name="add-outline"></ion-icon></button></a>
+      </div>
+      <hr class="accessory"></div>`);
+      const indexCopy = i;
+      $(".button2").eq(indexCopy).click(function() {
+        addZutat(indexCopy);
+      });
+    }
   }
 }
 
@@ -53,6 +55,7 @@ function prepareSearchUI() {
         }else {
           $(".nav__link").eq(index2).children().eq(0).removeClass("nav__link--active");
         }
+        updateZutatenUI();
       });
     });
   });
@@ -60,6 +63,7 @@ function prepareSearchUI() {
   $("#zutatensearch").on('keyup input', function() {
     filterZutaten();
   });
+  updateZutatenUI();
 }
 
 function filterZutaten() {

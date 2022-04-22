@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <title>Klimateller Passwort Erneuern</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="center">
       <h1>Neues Passwort festlegen</h1>
-      <form method="post">
+      <form id="passwordResetForm">
         <div class="txt_field">
-          <input type="text" required>
+          <input type="email" required name="email">
           <span></span>
           <label>E-Mail</label>
         </div>
+        <h1 id="formError" style="color:red;text-align:left;"></h1>
         <input type="submit" value="E-Mail senden">
         <div class="signup_link">
           Du kannst dich an dein Passwort erinnern? <a href="login.html">Zurück zum Login</a>
@@ -21,4 +23,6 @@
       </form>
     </div>
   </body>
+  <script src="js/RequestUtil.js"></script>
+  <script src="js/ResetPassword.js"></script>
 </html>

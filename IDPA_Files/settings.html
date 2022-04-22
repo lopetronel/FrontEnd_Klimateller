@@ -55,41 +55,43 @@
 				</div>
 </header>
 	<div class="text_containergrey">
-	<h1> Settings</h1>
+	<h1>Settings</h1>
+  <h2 id="username"></h2>
 </div>
 	<div class="text_containergreen">
 	<h1>Ihr aktuelles Co2-Ziel beträgt:</h1>
-	 <input type="number" id="points" name="points" step="1">
+	 <h4><input type="number" id="co2_goal" name="co2_goal" step="1">&nbsp;Gramm</h4>
 	 <br><br>
 
 
 </div>
 	<div class="text_containergreen">
 	<h1>Über wie viele Tage soll ihr Ziel gemessen werden?</h1>
-	 <input type="number" id="points" name="points" step="1">
+	 <h4><input type="number" id="co2_goal_days" name="co2_goal_days" step="1">&nbsp;Tage</h4>
 	 <br><br>
-	<a href="#" class="button-63">Speichern</a>
+	<a class="button-63" onclick="saveSettings();">Speichern</a>
 
 </div>
-
+<hr class="accessory">
+<div class="text_containergrey">
+<a href="impressum.html" class="button-63">Impressum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="dse.html" class="button-63">Datenschutzerklärung</a>
+<br>
+</div>
 <hr class="accessory">
 	<div class="text_container">
 	<h1>Von Ihrem Account Abmelden</h1>
 	<br>
 
-	<a href="login.html" class="button-62">Logout&nbsp;&nbsp;<ion-icon name="log-out-outline"></ion-icon></a>
+	<a id="logoutbutton" class="button-62">Logout&nbsp;&nbsp;<ion-icon name="log-out-outline"></ion-icon></a>
 	<br><br>
 </div>
 
 
-	<div class="text_containergrey">
-	<a href="impressum.html" class="button-63">Impressum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="dse.html" class="button-63">Datenschutzerklärung</a>
-	<br>
-</div>
+
 <hr class="accessory">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="js/Index.js"></script>
+<script src="js/Settings.js"></script>
 <script src="js/RequestUtil.js"></script>
   </body>
 </html>
