@@ -29,6 +29,7 @@ function loadZutaten() {
 function updateZutatenUI() {
   //Load the GUI
   $("#libraryitems").html("");
+  let addedButtonCount = 0;
   for(let i = 0;i<zutaten.length;i++) {
     if(category == 0 || zutaten[i].category == categories[category - 1]) {
       $("#libraryitems").append(`<div class="zutatitem"><div class="wrap2">
@@ -36,10 +37,12 @@ function updateZutatenUI() {
         <a align="right"><button class="button2"><ion-icon name="add-outline"></ion-icon></button></a>
       </div>
       <hr class="accessory"></div>`);
-      const indexCopy = i;
+      const indexCopy = addedButtonCount;
+      const zutatenIndexCopy = i;
       $(".button2").eq(indexCopy).click(function() {
-        addZutat(indexCopy);
+        addZutat(zutatenIndexCopy);
       });
+      addedButtonCount++;
     }
   }
 }

@@ -122,7 +122,7 @@ function loadZutaten(callback) {
     zutaten = JSON.parse(data);
     callback();
   }else {
-    makeRequest("GET", "https://klimateller.eliaschenker.com/api/getzutaten.php", "", function(data) {
+    makeRequest("GET", "getzutaten.php", "", function(data) {
       zutaten = data["result"];
       localStorage.setItem("zutaten", JSON.stringify(zutaten));
       callback();
@@ -198,7 +198,8 @@ function saveGericht() {
 //Speichert das Gericht (entsprechend dem Modus entweder einfügen oder editieren.)
 function submitGericht() {
   let file = mode == "add" ? "addgericht.php" : "editgericht.php";
-  makeRequest("POST", "https://klimateller.eliaschenker.com/api/" + file, {"meal": JSON.stringify(gericht), "user_meal_id" : user_meal_id}, function(data) {
+  let method = mode == "add" ? "POST" : "PUT";
+  makeRequest(method, file, {"meal": JSON.stringify(gericht), "user_meal_id" : user_meal_id}, function(data) {
     location.href = "index.html";
   });
 }

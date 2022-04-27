@@ -1,7 +1,7 @@
 $(document).ready(function() {
    checkScrollAndDownload(true);
 
-   makeRequest("GET", "https://klimateller.eliaschenker.com/api/getco2overview.php", "", function(data) {
+   makeRequest("GET", "getco2overview.php", "", function(data) {
      let progress = $(".progress-done");
      let co2_goal = parseInt(data["result"]["co2_goal"]) / 1000;
      let co2_emissions = data["result"]["total_co2_emissions"];
@@ -39,7 +39,7 @@ function checkScrollAndDownload(override=false) {
 
    if((scrollPercent > 99 || override) && !blockEntriesLoading) {
      blockEntriesLoading = true;
-     makeRequest("GET", "https://klimateller.eliaschenker.com/api/gettimeline.php?page=" + page + "&page_size=10", "", function(data) {
+     makeRequest("GET", "gettimeline.php?page=" + page + "&page_size=10", "", function(data) {
          let entries = data["result"];
          for(let i = 0;i<entries.length;i++) {
            const indexCopy = (page - 1) * 10 + i;
@@ -81,7 +81,7 @@ function addGericht() {
 }
 
 function editGericht(id) {
-  makeRequest("GET", "https://klimateller.eliaschenker.com/api/getgericht.php?user_meal_id=" + id, "", function(data) {
+  makeRequest("GET", "getgericht.php?user_meal_id=" + id, "", function(data) {
     localStorage.setItem("gericht", JSON.stringify(data["message"]));
     localStorage.setItem("mode", "edit");
     localStorage.setItem("user_meal_id", id);
@@ -90,7 +90,7 @@ function editGericht(id) {
 }
 
 function deleteGericht(id) {
-  makeRequest("DELETE", "https://klimateller.eliaschenker.com/api/deletegericht.php?meal_id=" + id, "", function(data) {
+  makeRequest("DELETE", "deletegericht.php", {"meal_id": id}, function(data) {
     location.reload();
   }, function() {
     location.reload();
